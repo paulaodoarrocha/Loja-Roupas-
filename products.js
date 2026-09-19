@@ -85,7 +85,7 @@ const PRODUCTS = [
     oldPrice: null,
     isNew: false,
     isBestseller: true,
-    image: "https://images.unsplash.com/photo-1519457851764-77dfdaf5b6bb?w=600&h=750&fit=crop",
+    image: "https://share.google/ZGCYK3rwQGCl1q2Vo",
     description: "Conjunto de moletom infantil, confortável para o dia a dia e a rotina escolar."
   },
   {
@@ -96,7 +96,7 @@ const PRODUCTS = [
     oldPrice: 129.90,
     isNew: false,
     isBestseller: false,
-    image: "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=600&h=750&fit=crop",
+    image: "https://share.google/ZGCYK3rwQGCl1q2Vo",
     description: "Vestido infantil leve, com estampa alegre, ideal para o verão."
   },
   {

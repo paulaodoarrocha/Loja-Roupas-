@@ -28,8 +28,8 @@ const STORE_CONFIG = {
 
   // Horários — PLACEHOLDER, substituir pelos horários reais da loja
   hours: [
-    { day: "Segunda a sexta", time: "--:-- às --:--" },
-    { day: "Sábado", time: "--:-- às --:--" },
-    { day: "Domingo", time: "Fechado / a confirmar" }
+    { day: "Segunda a sexta", time: "07:00 às 19:00" },
+    { day: "Sábado", time: "07:00 às 14:00" },
+    { day: "Domingo", time: "Fechado" }
   ]
 };
