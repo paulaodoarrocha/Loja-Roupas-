@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GOYÁ MODA — Roupas e acessórios em Valparaíso de Goiás</title>
-<meta name="description" content="LUME Moda — roupas e acessórios femininos, masculinos e infantis no Jardim Céu Azul, Valparaíso de Goiás - GO. Confira a coleção e fale pelo WhatsApp.">
+<meta name="description" content="GOYÁ MODA — roupas e acessórios femininos, masculinos e infantis no Jardim Céu Azul, Valparaíso de Goiás - GO. Confira a coleção e fale pelo WhatsApp.">
 <meta name="theme-color" content="#201c1a">
-
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="GOYÁ MODA">
@@ -22,6 +21,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+<script>
+document.documentElement.classList.add("js");
+document.addEventListener("error",function(e){
+  var i=e.target;
+  if(!i||i.tagName!=="IMG"||i.dataset.done)return;
+  var f=[];try{f=JSON.parse(i.dataset.fallbacks||"[]");}catch(x){}
+  if(f.length){i.src=f.shift();i.dataset.fallbacks=JSON.stringify(f);return;}
+  i.dataset.done="1";
+  var t=(i.alt||"GOYÁ MODA").replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  i.src="data:image/svg+xml;charset=utf-8,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='600' height='750'><rect width='100%' height='100%' fill='#ebe5df'/><text x='50%' y='50%' font-family='Georgia,serif' font-size='28' fill='#6b2a35' text-anchor='middle'>"+t+"</text></svg>");
+},true);
+</script>
+
 
 <script type="application/ld+json">
 {
@@ -42,10 +54,9 @@
 
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-<!-- ===================== HEADER ===================== -->
 <header class="site-header" id="topo">
   <div class="header-inner">
-    <a href="#topo" class="brand">LUME<span>.</span></a>
+    <a href="#topo" class="brand">GOYÁ<span>.</span></a>
 
     <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu de navegação">
       <span></span><span></span><span></span>
@@ -60,75 +71,73 @@
         <li><a href="#localizacao">Localização</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
-      <a href="#" class="btn btn-primary nav-whatsapp js-whatsapp-link" data-wa-message="geral">Falar no WhatsApp</a>
+      <a href="https://wa.me/5561999999999" class="btn btn-primary nav-whatsapp js-whatsapp-link" data-wa-message="geral">Falar no WhatsApp</a>
     </nav>
   </div>
 </header>
 
 <main id="conteudo">
 
-  <!-- ===================== HERO ===================== -->
   <section class="hero" aria-labelledby="heroTitle">
     <div class="hero-text">
-      <h1 id="heroTitle" class="hero-title">LUME Moda</h1>
+      <h1 id="heroTitle" class="hero-title">GOYÁ MODA</h1>
       <p class="hero-tagline">Peças que acompanham quem você é.</p>
       <p class="hero-desc">
         Uma seleção de roupas e acessórios para o dia a dia — do básico ao especial.
-        <span class="demo-note"></span>
       </p>
       <div class="hero-actions">
         <a href="#produtos" class="btn btn-primary">Ver coleção</a>
-        <a href="#" class="btn btn-outline js-whatsapp-link" data-wa-message="geral">Falar no WhatsApp</a>
+        <a href="https://wa.me/5561999999999" class="btn btn-outline js-whatsapp-link" data-wa-message="geral">Falar no WhatsApp</a>
       </div>
     </div>
     <div class="hero-media">
-      <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1000&h=1250&fit=crop" alt="Demonstração ilustrativa de arara com roupas em uma loja" loading="eager">
+      <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=1000&h=1250&fit=crop" alt="Arara com roupas na loja" loading="eager">
     </div>
   </section>
 
-  <!-- ===================== CATEGORIAS ===================== -->
   <section class="section" id="categorias" aria-labelledby="categoriasTitle">
     <div class="container">
       <h2 id="categoriasTitle" class="section-title">Categorias</h2>
 
-      
       <div class="category-grid reveal">
         <button class="category-tile category-tile--wide js-category" data-filter="feminino">
-          <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=900&h=650&fit=crop" alt="Demonstração ilustrativa de roupas femininas" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=900&h=650&fit=crop" alt="Roupas femininas" loading="lazy">
           <span class="category-label">Feminino</span>
         </button>
 
         <button class="category-tile js-category" data-filter="masculino">
-          <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=700&h=900&fit=crop" alt="Demonstração ilustrativa de roupas masculinas" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=700&h=900&fit=crop" alt="Roupas masculinas" loading="lazy">
           <span class="category-label">Masculino</span>
         </button>
 
-        
+        <button class="category-tile js-category" data-filter="infantil">
+          <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=700&h=900&fit=crop" data-fallbacks='["https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=700&h=900&fit=crop"]' alt="Roupas infantis" loading="lazy">
+          <span class="category-label">Infantil</span>
+        </button>
 
         <button class="category-tile js-category" data-filter="calcados">
-          <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=700&h=900&fit=crop" alt="Demonstração ilustrativa de calçados" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=700&h=900&fit=crop" alt="Calçados" loading="lazy">
           <span class="category-label">Calçados</span>
         </button>
 
         <button class="category-tile js-category" data-filter="acessorios">
-          <img src="https://images.unsplash.com/photo-1524532787116-e70228437bbe?w=700&h=900&fit=crop" alt="Demonstração ilustrativa de acessórios" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1524532787116-e70228437bbe?w=700&h=900&fit=crop" alt="Acessórios" loading="lazy">
           <span class="category-label">Acessórios</span>
         </button>
 
         <button class="category-tile js-category" data-filter="novidades">
-          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=700&h=900&fit=crop" alt="Demonstração ilustrativa de novidades da coleção" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=700&h=900&fit=crop" alt="Novidades da coleção" loading="lazy">
           <span class="category-label">Novidades</span>
         </button>
 
         <button class="category-tile js-category" data-filter="promocoes">
-          <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=700&h=900&fit=crop" alt="Demonstração ilustrativa de peças em promoção" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=700&h=900&fit=crop" alt="Peças em promoção" loading="lazy">
           <span class="category-label">Promoções</span>
         </button>
       </div>
     </div>
   </section>
 
-  <!-- ===================== DESTAQUES ===================== -->
   <section class="section section-alt" id="destaques" aria-labelledby="destaquesTitle">
     <div class="container">
       <h2 id="destaquesTitle" class="section-title">Coleção em destaque</h2>
@@ -143,11 +152,9 @@
     </div>
   </section>
 
-  <!-- ===================== CATÁLOGO / PRODUTOS ===================== -->
   <section class="section" id="produtos" aria-labelledby="produtosTitle">
     <div class="container">
       <h2 id="produtosTitle" class="section-title">Catálogo</h2>
-      <p class="section-subtitle"><code></code></p>
 
       <div class="filters" role="group" aria-label="Filtrar produtos por categoria">
         <button class="filter-btn is-active" data-filter="todos">Todos</button>
@@ -165,24 +172,22 @@
     </div>
   </section>
 
-  <!-- ===================== SOBRE ===================== -->
   <section class="section section-alt" id="sobre" aria-labelledby="sobreTitle">
     <div class="container about-grid reveal">
       <div class="about-media">
-        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=1000&fit=crop" alt="Demonstração ilustrativa do interior de uma loja de roupas" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&h=1000&fit=crop" alt="Interior de uma loja de roupas" loading="lazy">
       </div>
       <div class="about-text">
         <h2 id="sobreTitle" class="section-title section-title--left">Sobre a loja</h2>
         <p>
-          A LUME é uma loja de roupas e acessórios pensada para quem busca praticidade sem
-          abrir mão de estilo.
+          A GOYÁ MODA é uma loja de roupas e acessórios pensada para quem busca praticidade sem
+          abrir mão de estilo. Trabalhamos com peças femininas, masculinas e infantis, além de calçados e
+          acessórios, com atendimento próximo e facilidade para tirar dúvidas pelo WhatsApp.
         </p>
-        <p class="demo-note">(conteúdo institucional genérico — substituir por informações reais fornecidas pela loja)</p>
       </div>
     </div>
   </section>
 
-  <!-- ===================== LOCALIZAÇÃO ===================== -->
   <section class="section" id="localizacao" aria-labelledby="localizacaoTitle">
     <div class="container location-grid reveal">
       <div class="location-card">
@@ -194,55 +199,52 @@
 
         <h3 class="location-subtitle">Horário de funcionamento</h3>
         <dl class="hours-list" id="hoursList">
-          <!-- Preenchido dinamicamente a partir de STORE_CONFIG.hours em js/config.js -->
+          <div class="hours-row"><dt>Segunda a sexta</dt><dd>09:00 às 19:00</dd></div>
+          <div class="hours-row"><dt>Sábado</dt><dd>09:00 às 17:00</dd></div>
+          <div class="hours-row"><dt>Domingo</dt><dd>Fechado</dd></div>
         </dl>
-        <p class="demo-note">Horários</p>
 
         <div class="location-actions">
-          <a href="#" class="btn btn-primary" id="mapsBtn" target="_blank" rel="noopener">Como chegar</a>
-          <a href="#" class="btn btn-outline js-whatsapp-link" data-wa-message="geral">Falar no WhatsApp</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Jardim+C%C3%A9u+Azul+Valpara%C3%ADso+de+Goi%C3%A1s+GO" class="btn btn-primary" id="mapsBtn" target="_blank" rel="noopener">Como chegar</a>
+          <a href="https://wa.me/5561999999999" class="btn btn-outline js-whatsapp-link" data-wa-message="geral">Falar no WhatsApp</a>
         </div>
       </div>
 
-      <div class="map-placeholder" role="img" aria-label="Espaço reservado para mapa do Google Maps com a região do Jardim Céu Azul, Valparaíso de Goiás">
-        <p>Mapa do Google Maps<br><span></span></p>
+      <div class="map-embed">
+        <iframe title="Mapa da localização da GOYÁ MODA" src="https://www.google.com/maps?q=Jardim+C%C3%A9u+Azul,+Valpara%C3%ADso+de+Goi%C3%A1s+-+GO&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
-  <!-- ===================== INSTAGRAM ===================== -->
   <section class="section section-alt section-social" id="instagram" aria-labelledby="instagramTitle">
     <div class="container">
       <h2 id="instagramTitle" class="section-title">Siga no Instagram</h2>
-      <p class="section-subtitle">Espaço reservado para fotos e posts reais do perfil da loja.</p>
 
       <div class="instagram-grid reveal">
-        <div class="instagram-tile"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop" alt="Demonstração ilustrativa de post de moda" loading="lazy"></div>
-        <div class="instagram-tile"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&h=500&fit=crop" alt="Demonstração ilustrativa de post de moda" loading="lazy"></div>
-        <div class="instagram-tile"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&h=500&fit=crop" alt="Demonstração ilustrativa de post de moda" loading="lazy"></div>
-        <div class="instagram-tile"><img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=500&h=500&fit=crop" alt="Demonstração ilustrativa de post de moda" loading="lazy"></div>
+        <a class="instagram-tile js-instagram" href="https://www.instagram.com/goyamoda" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop" alt="Post de moda" loading="lazy"></a>
+        <a class="instagram-tile js-instagram" href="https://www.instagram.com/goyamoda" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&h=500&fit=crop" alt="Post de moda" loading="lazy"></a>
+        <a class="instagram-tile js-instagram" href="https://www.instagram.com/goyamoda" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&h=500&fit=crop" alt="Post de moda" loading="lazy"></a>
+        <a class="instagram-tile js-instagram" href="https://www.instagram.com/goyamoda" target="_blank" rel="noopener"><img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?w=500&h=500&fit=crop" alt="Post de moda" loading="lazy"></a>
       </div>
 
-      <a href="#" class="btn btn-outline" id="instagramBtn" target="_blank" rel="noopener">Seguir no Instagram</a>
+      <a href="https://www.instagram.com/goyamoda" id="instagramBtn" class="btn btn-outline js-instagram" target="_blank" rel="noopener">Seguir no Instagram</a>
     </div>
   </section>
 
-  <!-- ===================== CTA FINAL / CONTATO ===================== -->
   <section class="section cta-final" id="contato" aria-labelledby="ctaTitle">
     <div class="container container-narrow reveal">
       <h2 id="ctaTitle" class="cta-title">Encontrou algo que gostou?</h2>
       <p class="cta-sub">Fale com a gente pelo WhatsApp e tire suas dúvidas antes de decidir.</p>
-      <a href="#" class="btn btn-primary btn-large js-whatsapp-link" data-wa-message="geral">Falar no WhatsApp</a>
+      <a href="https://wa.me/5561999999999" class="btn btn-primary btn-large js-whatsapp-link" data-wa-message="geral">Falar no WhatsApp</a>
     </div>
   </section>
 
 </main>
 
-<!-- ===================== FOOTER ===================== -->
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col">
-      <a href="#topo" class="brand">LUME<span>.</span></a>
+      <a href="#topo" class="brand">GOYÁ<span>.</span></a>
       <p>Roupas e acessórios no Jardim Céu Azul, Valparaíso de Goiás - GO.</p>
     </div>
 
@@ -269,26 +271,24 @@
     <div class="footer-col">
       <h3>Contato</h3>
       <ul>
-        <li><a href="#" class="js-whatsapp-link" data-wa-message="geral">WhatsApp</a></li>
-        <li><a href="#" id="footerInstagram" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://wa.me/5561999999999" class="js-whatsapp-link" data-wa-message="geral">WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/goyamoda" id="footerInstagram" class="js-instagram" target="_blank" rel="noopener">Instagram</a></li>
         <li>Jardim Céu Azul — Valparaíso de Goiás - GO</li>
       </ul>
     </div>
   </div>
 
   <div class="footer-bottom container">
-    <p>&copy; <span id="ano"></span> LUME Moda. </p>
+    <p>&copy; <span id="ano"></span> GOYÁ MODA.</p>
   </div>
 </footer>
 
-<!-- Botão flutuante de WhatsApp -->
-<a href="#" class="whatsapp-float js-whatsapp-link" data-wa-message="geral" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
+<a href="https://wa.me/5561999999999" class="whatsapp-float js-whatsapp-link" data-wa-message="geral" aria-label="Falar no WhatsApp" target="_blank" rel="noopener">
   <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
     <path fill="currentColor" d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-2c1.8 1 3.9 1.5 6.3 1.5 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-2 0-3.9-.5-5.5-1.5l-.4-.2-4.6 1.2 1.2-4.5-.3-.4C5.3 17.7 4.8 16.4 4.8 15 4.8 8.9 9.8 4 16 4s11.2 4.9 11.2 11-5 11.8-11.2 11.8zm6.1-8.3c-.3-.2-2-1-2.3-1.1-.3-.1-.5-.2-.8.2s-.9 1.1-1.1 1.3c-.2.2-.4.2-.8.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7.2-.2.3-.4.5-.6.2-.2.2-.4.3-.6.1-.2.1-.4 0-.6-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2 .1.6-.1 2-.8 2.3-1.6.3-.8.3-1.4.2-1.6-.1-.1-.3-.2-.6-.4z"/>
   </svg>
 </a>
 
-<!-- Modal de produto -->
 <div class="modal-overlay" id="productModal" hidden>
   <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" id="modalClose" type="button" aria-label="Fechar">&times;</button>
@@ -327,9 +327,8 @@
   </article>
 </template>
 
-<script src="js/config.js"></script>
-<script src="js/products.js"></script>
-<script src="js/main.js"></script>
-  
+<script src="config.js"></script>
+<script src="products.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

@@ -1,35 +1,26 @@
-
-
 const STORE_CONFIG = {
-  // Identidade
-  name: "GOYÁ",                 // nome curto (usado no logo)
-  fullName: "GOYÁ MODA",        // nome completo (usado em textos e título da aba)
+  name: "GOYÁ",
+  fullName: "GOYÁ MODA",
 
-  // WhatsApp — SUBSTITUIR pelo número real da loja
-  // Formato: DDI + DDD + número, apenas dígitos (ex: 5561999998888)
   whatsapp: {
-    number: "61982206185", // <-- número fictício de demonstração
+    number: "5561982206185",
     messages: {
-      geral: "Olá! Vim pelo site da LUME e gostaria de mais informações.",
-      // {produto} é substituído automaticamente pelo nome do produto clicado
+      geral: "Olá! Vim pelo site da GOYÁ MODA e gostaria de mais informações.",
       produto: "Olá! Tenho interesse no produto {produto}. Poderia me passar mais informações?"
     }
   },
 
-  // Instagram — SUBSTITUIR pelo perfil real da loja
-  instagram: "https://www.instagram.com/phflow.px?stkn=NDEwemU2dTI0ajcx", // <-- placeholder, trocar pelo @ real
+  instagram: "https://www.instagram.com/phflow.px?stkn=NDEwemU2dTI0ajcx",
 
-  // Localização — apenas o bairro/cidade fornecidos, sem inventar endereço de rua
   location: {
     line1: "Jardim Céu Azul",
     line2: "Valparaíso de Goiás — GO",
-    mapsQuery: "Jardim Céu Azul, Valparaíso de Goiás - GO" // usado para montar o link do Google Maps
+    mapsQuery: "Jardim Céu Azul, Valparaíso de Goiás - GO"
   },
 
-  // Horários — PLACEHOLDER, substituir pelos horários reais da loja
   hours: [
-    { day: "Segunda a sexta", time: "07:00 às 19:00" },
-    { day: "Sábado", time: "07:00 às 14:00" },
+    { day: "Segunda a sexta", time: "09:00 às 19:00" },
+    { day: "Sábado", time: "09:00 às 17:00" },
     { day: "Domingo", time: "Fechado" }
   ]
 };

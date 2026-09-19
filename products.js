@@ -1,4 +1,3 @@
-
 const PRODUCTS = [
   {
     id: 1,
@@ -8,7 +7,7 @@ const PRODUCTS = [
     oldPrice: null,
     isNew: true,
     isBestseller: false,
-    image: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600&h=750&fit=crop"],
     description: "Camisa em tecido leve, caimento solto, ideal para compor looks do dia a dia."
   },
   {
@@ -19,7 +18,7 @@ const PRODUCTS = [
     oldPrice: 319.90,
     isNew: false,
     isBestseller: true,
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=750&fit=crop"],
     description: "Vestido midi de caimento fluido, versátil para o dia e para a noite."
   },
   {
@@ -30,7 +29,7 @@ const PRODUCTS = [
     oldPrice: null,
     isNew: false,
     isBestseller: false,
-    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1509631179647-0177331693ae?w=600&h=750&fit=crop"],
     description: "Calça de alfaiataria com modelagem reta, para um visual mais formal."
   },
   {
@@ -41,7 +40,7 @@ const PRODUCTS = [
     oldPrice: null,
     isNew: true,
     isBestseller: false,
-    image: "https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=600&h=750&fit=crop"],
     description: "Blazer de corte estruturado, ótima peça-chave para compor produções."
   },
   {
@@ -52,7 +51,7 @@ const PRODUCTS = [
     oldPrice: null,
     isNew: false,
     isBestseller: true,
-    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600&h=750&fit=crop"],
     description: "Camisa social de corte slim, indicada para o trabalho ou ocasiões especiais."
   },
   {
@@ -63,7 +62,7 @@ const PRODUCTS = [
     oldPrice: 269.90,
     isNew: false,
     isBestseller: false,
-    image: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1551028719-00167b16eac5?w=600&h=750&fit=crop"],
     description: "Jaqueta jeans tradicional, confortável para usar em diferentes estações."
   },
   {
@@ -74,7 +73,7 @@ const PRODUCTS = [
     oldPrice: null,
     isNew: true,
     isBestseller: false,
-    image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&h=750&fit=crop"],
     description: "Camiseta em algodão de gramatura mais alta, com caimento firme."
   },
   {
@@ -85,7 +84,7 @@ const PRODUCTS = [
     oldPrice: null,
     isNew: false,
     isBestseller: true,
-    image: "https://share.google/ZGCYK3rwQGCl1q2Vo",
+    images: ["https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=600&h=750&fit=crop", "https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?w=600&h=750&fit=crop", "https://images.unsplash.com/photo-1471286174890-9c112ffca5b4?w=600&h=750&fit=crop"],
     description: "Conjunto de moletom infantil, confortável para o dia a dia e a rotina escolar."
   },
   {
@@ -96,7 +95,7 @@ const PRODUCTS = [
     oldPrice: 129.90,
     isNew: false,
     isBestseller: false,
-    image: "https://share.google/ZGCYK3rwQGCl1q2Vo",
+    images: ["https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=600&h=750&fit=crop", "https://images.unsplash.com/photo-1476234251651-f353703a034d?w=600&h=750&fit=crop", "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=600&h=750&fit=crop"],
     description: "Vestido infantil leve, com estampa alegre, ideal para o verão."
   },
   {
@@ -107,7 +106,7 @@ const PRODUCTS = [
     oldPrice: null,
     isNew: true,
     isBestseller: true,
-    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600&h=750&fit=crop"],
     description: "Tênis casual branco, combina com praticamente qualquer produção."
   },
   {
@@ -118,7 +117,7 @@ const PRODUCTS = [
     oldPrice: 389.90,
     isNew: false,
     isBestseller: false,
-    image: "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1520639888713-7851133b1ed0?w=600&h=750&fit=crop"],
     description: "Bota estilo coturno, resistente e versátil para diferentes looks."
   },
   {
@@ -129,7 +128,7 @@ const PRODUCTS = [
     oldPrice: null,
     isNew: false,
     isBestseller: false,
-    image: "https://images.unsplash.com/photo-1524532787116-e70228437bbe?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1524532787116-e70228437bbe?w=600&h=750&fit=crop"],
     description: "Bolsa de formato estruturado, com espaço interno para o essencial do dia."
   },
   {
@@ -140,7 +139,7 @@ const PRODUCTS = [
     oldPrice: 99.90,
     isNew: false,
     isBestseller: false,
-    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=750&fit=crop",
+    images: ["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=750&fit=crop"],
     description: "Cinto em couro legítimo, acabamento simples para compor looks casuais ou formais."
   }
 ];

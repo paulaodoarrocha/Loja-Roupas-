@@ -1,15 +1,7 @@
-/* =========================================================
-   main.js
-   Depende de STORE_CONFIG (js/config.js) e PRODUCTS (js/products.js),
-   que devem ser carregados antes deste arquivo.
-========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =======================================================
-     HELPERS
-  ======================================================= */
-  const formatPrice = (value) =>
+    const formatPrice = (value) =>
     value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
   function buildWhatsappLink(message) {
@@ -20,21 +12,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return STORE_CONFIG.whatsapp.messages.produto.replace("{produto}", productName);
   }
 
-  /* =======================================================
-     LINKS DE WHATSAPP, INSTAGRAM E GOOGLE MAPS
-     (gerados a partir de STORE_CONFIG, nada fixo no HTML)
-  ======================================================= */
-  document.querySelectorAll(".js-whatsapp-link").forEach((link) => {
+    document.querySelectorAll(".js-whatsapp-link").forEach((link) => {
     const key = link.dataset.waMessage || "geral";
     const message = STORE_CONFIG.whatsapp.messages[key] || STORE_CONFIG.whatsapp.messages.geral;
     link.setAttribute("href", buildWhatsappLink(message));
   });
 
-  const instagramTargets = ["#instagramBtn", "#footerInstagram"];
-  instagramTargets.forEach((selector) => {
-    const el = document.querySelector(selector);
-    if (el) el.setAttribute("href", STORE_CONFIG.instagram);
-  });
+  document.querySelectorAll(".js-instagram").forEach((el) => el.setAttribute("href", STORE_CONFIG.instagram));
 
   const mapsBtn = document.getElementById("mapsBtn");
   if (mapsBtn) {
@@ -42,10 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mapsBtn.setAttribute("href", `https://www.google.com/maps/search/?api=1&query=${query}`);
   }
 
-  /* =======================================================
-     HORÁRIOS (a partir de STORE_CONFIG.hours)
-  ======================================================= */
-  const hoursList = document.getElementById("hoursList");
+    const hoursList = document.getElementById("hoursList");
   if (hoursList) {
     hoursList.innerHTML = STORE_CONFIG.hours
       .map(
@@ -58,10 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .join("");
   }
 
-  /* =======================================================
-     MENU MOBILE
-  ======================================================= */
-  const menuToggle = document.getElementById("menuToggle");
+    const menuToggle = document.getElementById("menuToggle");
   const navMenu = document.getElementById("navMenu");
 
   function closeMenu() {
@@ -80,10 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("resize", () => { if (window.innerWidth > 760) closeMenu(); });
   }
 
-  /* =======================================================
-     RENDERIZAÇÃO DE CARDS DE PRODUTO (via <template>)
-  ======================================================= */
-  const cardTemplate = document.getElementById("productCardTemplate");
+    const cardTemplate = document.getElementById("productCardTemplate");
 
   function createProductCard(product) {
     const node = cardTemplate.content.cloneNode(true);
@@ -93,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (product.isNew) badge.textContent = "Novo";
 
     const img = node.querySelector(".product-image img");
-    img.src = product.image;
-    img.alt = `Demonstração ilustrativa: ${product.name}`;
+    setImage(img, product);
+    img.alt = product.name;
     img.loading = "lazy";
 
     node.querySelector(".product-category").textContent = capitalize(product.category);
@@ -116,14 +91,18 @@ document.addEventListener("DOMContentLoaded", () => {
     return node;
   }
 
+  function setImage(img, product) {
+    const list = product.images || [];
+    img.dataset.done = "";
+    img.dataset.fallbacks = JSON.stringify(list.slice(1));
+    img.src = list[0] || "";
+  }
+
   function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  /* =======================================================
-     CATÁLOGO + FILTROS
-  ======================================================= */
-  const productGrid = document.getElementById("productGrid");
+    const productGrid = document.getElementById("productGrid");
   const emptyState = document.getElementById("emptyState");
   const filterButtons = document.querySelectorAll(".filter-btn");
 
@@ -157,8 +136,6 @@ document.addEventListener("DOMContentLoaded", () => {
   filterButtons.forEach((btn) => {
     btn.addEventListener("click", () => setActiveFilter(btn.dataset.filter));
   });
-
-  // Categorias e links do rodapé aplicam o filtro correspondente e rolam até o catálogo
   document.querySelectorAll(".js-category").forEach((el) => {
     el.addEventListener("click", (e) => {
       const filter = el.dataset.filter;
@@ -171,10 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* =======================================================
-     DESTAQUES (Mais vendidos / Novidades / Promoções)
-  ======================================================= */
-  const highlightGrid = document.getElementById("highlightGrid");
+    const highlightGrid = document.getElementById("highlightGrid");
   const tabButtons = document.querySelectorAll(".tab");
 
   function matchesHighlight(product, type) {
@@ -200,10 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* =======================================================
-     MODAL DE PRODUTO ("Saber mais")
-  ======================================================= */
-  const modal = document.getElementById("productModal");
+    const modal = document.getElementById("productModal");
   const modalClose = document.getElementById("modalClose");
   const modalImage = document.getElementById("modalImage");
   const modalCategory = document.getElementById("modalCategory");
@@ -215,8 +186,8 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastFocusedEl = null;
 
   function openProductModal(product) {
-    modalImage.src = product.image;
-    modalImage.alt = `Demonstração ilustrativa: ${product.name}`;
+    setImage(modalImage, product);
+    modalImage.alt = product.name;
     modalCategory.textContent = capitalize(product.category);
     modalTitle.textContent = product.name;
     modalDescription.textContent = product.description;
@@ -242,10 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "Escape" && !modal.hidden) closeProductModal();
   });
 
-  /* =======================================================
-     SCROLL SUAVE PARA LINKS INTERNOS
-  ======================================================= */
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       const targetId = anchor.getAttribute("href");
       if (targetId.length > 1 && !anchor.classList.contains("js-category")) {
@@ -258,10 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* =======================================================
-     ANIMAÇÃO DE ENTRADA AO ROLAR (respeita prefers-reduced-motion)
-  ======================================================= */
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let revealObserver = null;
 
   if ("IntersectionObserver" in window && !prefersReducedMotion) {
@@ -285,14 +250,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* =======================================================
-     INICIALIZAÇÃO
-  ======================================================= */
-  renderProducts("todos");
+    renderProducts("todos");
   renderHighlights("bestseller");
   observeReveal(document.querySelectorAll(
     ".category-grid.reveal, .about-grid.reveal, .location-grid.reveal, .instagram-grid.reveal, .cta-final .reveal"
   ));
+
+  window.setTimeout(() => {
+    document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
+  }, 2500);
 
   const anoEl = document.getElementById("ano");
   if (anoEl) anoEl.textContent = new Date().getFullYear();
